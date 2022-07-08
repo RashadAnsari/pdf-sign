@@ -1,0 +1,7 @@
+{
+    "cSpell.words": [
+        "pyhanko",
+        "timestamper"
+    ],
+    "python.formatting.provider": "black"
+}
