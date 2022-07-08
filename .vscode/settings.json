@@ -1,6 +1,11 @@
 {
     "cSpell.words": [
+        "genrsa",
+        "inkey",
+        "pkcs",
         "pyhanko",
+        "Rashad",
+        "signkey",
         "timestamper"
     ],
     "python.formatting.provider": "black"

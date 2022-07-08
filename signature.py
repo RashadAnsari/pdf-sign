@@ -15,7 +15,7 @@ with open("document.pdf", "rb") as doc:
         signers.sign_pdf(
             writer,
             signature_meta=signers.PdfSignatureMetadata(
-                field_name="Signature", reason="Signed by RashBax"
+                field_name="Signature", reason="Signed with PDF Sign"
             ),
             signer=signer,
             timestamper=timestamper,
@@ -34,7 +34,7 @@ with open("document.pdf", "rb") as doc:
     )
 
     signature_metadata1 = signers.PdfSignatureMetadata(
-        field_name="Signature 1", reason="Signed with RashBax by John Doe"
+        field_name="Signature 1", reason="Signed with PDF Sign on behalf of John Doe"
     )
 
     pdf_signer1 = signers.PdfSigner(
@@ -62,7 +62,7 @@ with open("output2.pdf", "rb") as doc:
     )
 
     signature_metadata2 = signers.PdfSignatureMetadata(
-        field_name="Signature 2", reason="Signed with RashBax by Jack Bauer"
+        field_name="Signature 2", reason="Signed with PDF Sign on behalf of Jack Bauer"
     )
 
     pdf_signer2 = signers.PdfSigner(
