@@ -3,7 +3,7 @@
 ## Generate Self-Signed Certificate
 
 ```bash
-openssl genrsa -des3 -out server.key 4096
+openssl genrsa -aes128 -out server.key 4096
 openssl req -new -key server.key -out server.csr
 cp server.key server.key.org
 openssl rsa -in server.key.org -out server.key
