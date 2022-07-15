@@ -3,8 +3,11 @@ from pyhanko.pdf_utils import images
 from pyhanko.pdf_utils.incremental_writer import IncrementalPdfFileWriter
 from pyhanko.sign import fields, signers, timestamps
 
-signer = signers.SimpleSigner.load_pkcs12(
-    pfx_file="certificate.p12", passphrase=b"123456"
+# signer = signers.SimpleSigner.load_pkcs12(
+#     pfx_file="certificate.p12", passphrase=b"123456"
+# )
+signer = signers.SimpleSigner.load(
+    key_file="server.key", cert_file="server.crt", key_passphrase=b"123456"
 )
 timestamper = timestamps.HTTPTimeStamper(url="http://timestamp.digicert.com")
 
